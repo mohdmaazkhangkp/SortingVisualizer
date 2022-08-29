@@ -1,0 +1,14 @@
+#bar-container{
+margin-top: 80px;
+ display: flex;
+ justify-content: center;
+ flex-flow: wrap-reverse;
+}
+
+.bars{
+    margin-left: 1px;
+    background-color: blue;
+    /* margin-bottom: 200px; */
+    width: 9px; 
+    /* display: inline-block; */
+}
