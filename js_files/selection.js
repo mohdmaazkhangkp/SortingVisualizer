@@ -4,6 +4,7 @@ async function selectionSort(){
     for(let i=0; i<ele.length-1; i++){
         let min_ind=i;
        for(let j=i+1; j<ele.length; j++){
+         if(hasPressedStop==true) return;
           ele[j].style.background='red';
           ele[min_ind].style.background='red';
           await delayTime(delay);
@@ -22,3 +23,15 @@ async function selectionSort(){
     }
     ele[ele.length-1].style.background = 'green';
  }
+
+
+ const selSortbtn = document.querySelector(".selectionSort");
+ selSortbtn.addEventListener('click',   function(){
+    hasPressedStop=false;
+       enableStopBtn();
+       disableNewArrayBtn();
+       
+       selectionSort();
+       disableSortingBtn();
+ });
+ 
