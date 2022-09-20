@@ -4,18 +4,19 @@ generateBars();
 
 //functions
 function generateBars() {
-   const bar = document.querySelector("#bar-container");
-   bar.innerHTML = '';
+   const barContainer = document.querySelector("#bar-container");
+   barContainer.innerHTML = '';
 
-   var arr = new Array(100);
+   let arr = new Array(100);
 for(let i=0; i<arr.length; i++){
+   // arr will contain number between 2 and 100
    arr[i] = Math.round(2 + (100-2)* Math.random());
 }
 for(let i=0; i<arr.length; i++){ 
  let bar = document.createElement("div");
  bar.className = "bars";
  bar.style.height= 3*arr[i] +"px";
- document.getElementById("bar-container").appendChild(bar);
+ barContainer.appendChild(bar);
 }
  }
 
@@ -67,7 +68,6 @@ function disableSortingBtn(){
    document.querySelector(".bubbleSort").disabled = true;
    document.querySelector(".insertionSort").disabled = true;
    document.querySelector(".mergeSort").disabled = true;
-   document.querySelector(".quickSort").disabled = true;
    document.querySelector(".selectionSort").disabled = true;
    document.querySelector(".heapSort").disabled = true;
 }
@@ -76,7 +76,6 @@ function enableSortingBtn(){
    document.querySelector(".bubbleSort").disabled = false;
    document.querySelector(".insertionSort").disabled = false;
    document.querySelector(".mergeSort").disabled = false;
-   document.querySelector(".quickSort").disabled = false;
    document.querySelector(".selectionSort").disabled = false;
    document.querySelector(".heapSort").disabled = false;
 }

@@ -23,7 +23,6 @@ bubSortbtn.addEventListener('click',   function(){
    hasPressedStop=false;
       enableStopBtn();
       disableNewArrayBtn();
-      
       bubbleSort();
       disableSortingBtn();
 });
