@@ -69,7 +69,6 @@ function disableSortingBtn(){
    document.querySelector(".insertionSort").disabled = true;
    document.querySelector(".mergeSort").disabled = true;
    document.querySelector(".selectionSort").disabled = true;
-   document.querySelector(".heapSort").disabled = true;
 }
 
 function enableSortingBtn(){
@@ -77,7 +76,6 @@ function enableSortingBtn(){
    document.querySelector(".insertionSort").disabled = false;
    document.querySelector(".mergeSort").disabled = false;
    document.querySelector(".selectionSort").disabled = false;
-   document.querySelector(".heapSort").disabled = false;
 }
 
 function disableNewArrayBtn(){
