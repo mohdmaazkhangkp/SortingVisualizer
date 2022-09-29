@@ -1,4 +1,12 @@
 //Main Engine
+let arrSize;
+const mq = window.matchMedia( "(max-width: 500px)" );
+if (mq.matches) {
+   arrSize=50;
+}
+ else {
+  arrSize=100;
+}
 generateBars();
 
 
@@ -7,7 +15,7 @@ function generateBars() {
    const barContainer = document.querySelector("#bar-container");
    barContainer.innerHTML = '';
 
-   let arr = new Array(100);
+   let arr = new Array(arrSize);
 for(let i=0; i<arr.length; i++){
    // arr will contain number between 2 and 100
    arr[i] = Math.round(2 + (100-2)* Math.random());
@@ -75,7 +83,7 @@ function enableSortingBtn(){
    document.querySelector(".bubbleSort").disabled = false;
    document.querySelector(".insertionSort").disabled = false;
    document.querySelector(".mergeSort").disabled = false;
-   document.querySelector(".selectionSort").disabled = false;
+   document.querySelector(".selectionSort").disabled = false;  
 }
 
 function disableNewArrayBtn(){
